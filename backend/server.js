@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const products = require('./data/products');
+
+dotenv.config();
 const app = express();
 
 app.use(cors());
@@ -15,4 +18,8 @@ app.get('/api/products/:id', (req, res) => {
   const product = products.find((product) => product._id === req.params.id);
   res.json(product);
 });
-app.listen(5000, () => console.log('Server Running on Port 5000'));
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () =>
+  console.log(`Server Running in ${process.env.NODE_ENV} on Port ${PORT}`)
+);
