@@ -8,6 +8,7 @@ import Rating from '../components/Rating';
 const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({});
   const testConst2 = 'this const is to test and solve merge conflicts :D';
+  const testConst = 'This const is for solve git merge conflicts';
   useEffect(() => {
     const getProductById = async () => {
       try {
