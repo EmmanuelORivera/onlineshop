@@ -7,18 +7,17 @@ import Rating from '../components/Rating';
 
 const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({});
-  const urlId = match.params.id;
   useEffect(() => {
     const getProductById = async () => {
       try {
-        const { data } = await axios.get(`/api/products/${urlId}`);
+        const { data } = await axios.get(`/api/products/${match.params.id}`);
         setProduct(data);
       } catch (err) {
         console.error(err);
       }
     };
     getProductById();
-  }, []);
+  }, [match]);
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
