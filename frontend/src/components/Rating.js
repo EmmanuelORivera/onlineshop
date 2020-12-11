@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Rating = ({ value, text, color }) => {
+  console.log(value, text, color);
   const makeStarsRating = () => {
     const numOfStars = 5;
     const arrayOfStars = [];
@@ -26,7 +27,6 @@ const Rating = ({ value, text, color }) => {
 
   const starsRating = makeStarsRating();
 
-  console.log(starsRating);
   return (
     <div className='rating'>
       {starsRating.map((star, index) => (
