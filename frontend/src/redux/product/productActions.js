@@ -37,7 +37,6 @@ export const listProductDetails = (id) => async (dispatch) => {
       payload: data,
     });
   } catch (err) {
-    console.error(err.response);
     dispatch({
       type: PRODUCT_DETAILS_FAIL,
       payload:
