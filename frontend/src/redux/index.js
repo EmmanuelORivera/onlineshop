@@ -4,6 +4,7 @@ export {
   addToCart,
   removeFromCart,
   saveShippingAddress,
+  savePaymentMethod,
 } from './cart/cartActions';
 
 export {
