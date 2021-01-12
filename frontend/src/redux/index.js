@@ -1,5 +1,11 @@
 export * from './product/productActions';
-export { addToCart, removeFromCart } from './cart/cartActions';
+
+export {
+  addToCart,
+  removeFromCart,
+  saveShippingAddress,
+} from './cart/cartActions';
+
 export {
   login,
   logout,
